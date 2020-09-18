@@ -1,0 +1,16 @@
+<h1><%= @restaurant.name  %></h1>
+<br>
+<br>
+<div>Rating:<%= @restaurant.rating %></div>
+<br>
+<br>
+
+<img src=<%= @restaurant.image %> >
+<br>
+<br>
+<%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant)%>
+<br>
+<br>
+<%= link_to "Delete This Restaurant", restaurant_path(@restaurant.id), 
+    method: "delete", 
+    data: {:confirm => "Are You Sure?"}%>
